@@ -20,7 +20,7 @@ export default function Menu({ pizzas }) {
                     //urlFor is created in clint.js
                     const src = urlFor(pizza.image).url()
                     return (
-                        <Link href={`./pizza/${pizza.slug.current}`}>
+                        <Link href={`./pizza/${pizza.slug.current}`} key={id}>
                         <div className={css.pizza} key={id}>
                             <div className={css.ImageWrapper}>
                                 <Image
@@ -29,7 +29,9 @@ export default function Menu({ pizzas }) {
                                     src={src} 
                                     alt=''
                                     objectFit='cover'
-                                    layout='fill' />
+                                    layout='fill'
+                                    unoptimized={true}
+                                     />
                             </div>
                             <span>{pizza.name}</span>
                             <span><span style={{color:"var(--themeRed)"}}>$</span> {pizza.price[0]}</span>

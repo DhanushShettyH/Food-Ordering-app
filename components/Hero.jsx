@@ -11,7 +11,7 @@ export default function Hero() {
             <div className={css.left}>
                 <div className={css.cherryDiv}>
                     <span>More than Faster</span>
-                    <Image src={Cherry} alt='' width={40} height={25} />
+                    <Image src={Cherry} alt='' width={40} height={25} priority={2} />
                 </div>
 
                 <div className={css.heroText}>
@@ -35,7 +35,7 @@ export default function Hero() {
             {/* right side */}
             <div className={css.right}>
                 <div className={css.imageContainer}>
-                    <Image src={HeroImage} alt='' layout='intrinsic' /> {/*layout='intrinsic' this means it only contain space and width of it's parent imageContainer have */}
+                    <Image src={HeroImage} alt='' layout='intrinsic' priority={1} /> {/*layout='intrinsic' this means it only contain space and width of it's parent imageContainer have */}
                 </div>
 
 
@@ -49,7 +49,7 @@ export default function Hero() {
 
                 <div className={css.Pizza}>
                     <div>
-                        <Image src={Pizza1} alt='' objectFit='cover' layout='intrinsic' />{/*objectFit='cover' the croping is handled by next.js */}
+                        <Image src={Pizza1} alt='' objectFit='cover' layout='intrinsic' priority={3} />{/*objectFit='cover' the croping is handled by next.js */}
                     </div>
                     <div className={css.details}>
                         <span>Italian Pizza</span>

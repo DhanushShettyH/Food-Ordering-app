@@ -34,14 +34,16 @@ export default function Pizza({ pizza }) {
     return (
         <Layout>
             <div className={css.container}>
-                <dic className={css.imageWrapper}>
+                <div className={css.imageWrapper}>
                     <Image
                         loader={() => src}
                         src={src}
                         alt=''
                         layout='fill'
-                        unoptimized objectFit='cover' />
-                </dic>
+                        objectFit='cover'
+                        unoptimized={true} 
+                        priority={2}/>
+                </div>
                 {/* Right side */}
                 <div className={css.right}>
                     <span>{pizza.name}</span>
