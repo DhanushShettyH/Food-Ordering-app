@@ -3,8 +3,8 @@ import Image from 'next/image';
 import Layout from '../../components/Layout'
 import client, { urlFor } from '../../lib/client'
 import css from '../../styles/Pizza.module.css'
-import LeftArrow from '../../assets/arrowLeft.png'
-import RightArrow from '../../assets/arrowRight.png'
+import LeftArrow from '../../public/arrowLeft.png'
+import RightArrow from '../../public/arrowRight.png'
 import { useState } from 'react';
 import { useStore } from '../../store/store';
 import toast, {Toaster} from 'react-hot-toast';

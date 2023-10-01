@@ -2,10 +2,10 @@ import client from '../../lib/client';
 import Layout from '../../components/Layout'
 import css from '../../styles/Order.module.css'
 import { UilBill, UilBox } from '@iconscout/react-unicons'
-import Onway from '../../assets/onway.png'
-import Spinner from '../../assets/spinner.svg'
+import Onway from '../../public/onway.png'
+import Spinner from '../../public/spinner.svg'
 import Image from 'next/image';
-import Cooking from '../../assets/cooking.png'
+import Cooking from '../../public/cooking.png'
 import { useEffect } from 'react';
 
 export const getServerSideProps = async ({ params }) => {
