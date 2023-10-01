@@ -6,14 +6,19 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "both": "concurrently \"yarn dev\" \"cd sanity && npm run dev\""
+
   },
   "dependencies": {
     "@iconscout/react-unicons": "^1.1.6",
     "@mantine/core": "^4.2.12",
     "@mantine/hooks": "^4.2.12",
+    "@sanity/client": "^6.4.12",
+    "@sanity/image-url": "^1.0.2",
     "@stripe/stripe-js": "^1.32.0",
     "next": "12.2.0",
+    "next-sanity": "^5.5.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hot-toast": "^2.2.0",
