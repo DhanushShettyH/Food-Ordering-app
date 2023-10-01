@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import css from '../styles/Services.module.css'
-import s1 from '../assets/s1.png'
-import s2 from '../assets/s2.png'
-import s3 from '../assets/s3.png'
+import s1 from '../public/s1.png'
+import s2 from '../public/s2.png'
+import s3 from '../public/s3.png'
 export default function Services() {
     return (
         <>

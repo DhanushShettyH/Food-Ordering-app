@@ -1,7 +1,7 @@
 // edf  es6 extension
 import css from '../styles/Header.module.css'
 import Image from 'next/image'
-import Logo from '../assets/logo.png'
+import Logo from '../public/Logo.png'
 import { UilShoppingBag, UilReceipt } from '@iconscout/react-unicons'
 import { useStore } from '../store/store'
 import Link from 'next/link'
