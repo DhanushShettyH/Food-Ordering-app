@@ -8,59 +8,62 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 export default function Header() {
 
-    const [Order, setOrder] = useState("")
-    useEffect(() => {
-        // in OrderModal.jsx we set order id
-        setOrder(localStorage.getItem("order"))
+	const [Order, setOrder] = useState("")
+	useEffect(() => {
+		// in OrderModal.jsx we set order id
+		setOrder(localStorage.getItem("order"))
 
-    }, [])
-
-
-    const state = useStore((state) => state)
-    const item = useStore((state) => state.cart.pizzas.length)
-
-    return (
-        <div className={css.header}>
-            {/* logo side */}
-            <div className={css.logo}>
-                {/* Image component of next.js it make img responsive */}
-                <Image src={Logo} alt="" width={50} height={50} />
-                <span>Fudo</span>
-            </div>
-
-            {/* menu sie */}
-            <ul className={css.menu}>
-                <li>
-                    <Link href='../'>Home</Link>
-                </li>
-                <li>Menu</li>
-                <li>Contact</li>
-            </ul>
-
-            {/* Right Side */}
-            <div className={css.rightside}>
-                <Link href='/cart'>
-                    <div className={css.cart}>
-                        {/* this icon get by react icon */}
-                        <UilShoppingBag size={35} color="#2E2E2E" />
-                        <div className={css.badge}>{item}</div>
-                    </div>
-                </Link>
+	}, [])
 
 
-                {Order &&
-                    (
-                        <Link href={`/order/${Order}`}>
-                            <div className={css.cart}>
-                                {/* this icon get by react icon */}
-                                <UilReceipt size={35} color="#2E2E2E" />
-                                {Order != "" && <div className={css.badge}>1</div>}
-                            </div>
-                        </Link>
-                    )}
+	const state = useStore((state) => state)
+	const item = useStore((state) => state.cart.pizzas.length)
 
-            </div>
-        </div>
-    )
+	return (
+		<div className=" flex items-center justify-between  pr-3 p-5">
+			{/* logo side */}
+			<div className={css.logo}>
+				{/* Image component of next.js it make img responsive */}
+				<Image className='hidden' src={Logo} alt="" width={50} height={50} />
+				<span>Fudo</span>
+			</div>
+
+			{/* menu sie */}
+			<div className=' hidden md:block'>
+				<ul className={css.menu}>
+					<li>
+						<Link href='../'>Home</Link>
+					</li>
+					<li>Menu</li>
+					<li>Contact</li>
+				</ul>
+			</div>
+
+
+			{/* Right Side */}
+			<div className={css.rightside}>
+				<Link href='/cart'>
+					<div className={css.cart}>
+						{/* this icon get by react icon */}
+						<UilShoppingBag size={35} color="#2E2E2E" />
+						<div className={css.badge}>{item}</div>
+					</div>
+				</Link>
+
+
+				{Order &&
+					(
+						<Link href={`/order/${Order}`}>
+							<div className={css.cart}>
+								{/* this icon get by react icon */}
+								<UilReceipt size={35} color="#2E2E2E" />
+								{Order != "" && <div className={css.badge}>1</div>}
+							</div>
+						</Link>
+					)}
+
+			</div>
+		</div>
+	)
 
 }

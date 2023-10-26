@@ -13,6 +13,7 @@
 }
 .heading>:nth-child(2) , .heading>:nth-child(3){
     font-size: 2rem;
+	text-align: center;
 }
 
 .services{

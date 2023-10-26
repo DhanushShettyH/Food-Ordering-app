@@ -13,8 +13,9 @@
 .details{
     display: flex;
     flex-direction: column;
+	width: 100%;
     gap: 1rem;
-    width: 40%;
+
 }
 .details>div{
     display: flex;

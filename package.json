@@ -8,7 +8,6 @@
     "start": "next start",
     "lint": "next lint",
     "both": "concurrently \"yarn dev\" \"cd sanity && npm run dev\""
-
   },
   "dependencies": {
     "@iconscout/react-unicons": "^1.1.6",
@@ -26,7 +25,10 @@
     "zustand": "^4.0.0-rc.1"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.16",
     "eslint": "8.19.0",
-    "eslint-config-next": "12.2.0"
+    "eslint-config-next": "12.2.0",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.5"
   }
 }
